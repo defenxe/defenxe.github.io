@@ -15,6 +15,9 @@ header {
     justify-content: space-around;
     align-items: center;
 }
+header b{
+    font-weight: bold;
+}
 header .menu a{
     text-decoration: none;
     color: black;
@@ -391,4 +394,5 @@ footer {
     .content{
         height: 1600px;
     }
+
 }
