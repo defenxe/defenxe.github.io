@@ -1,0 +1,394 @@
+/* html */
+html{
+    scroll-behavior: smooth; /*html에서 id로 링크 이동 시 부드럽게 스크롤*/
+}
+
+/* header */
+header { 
+    background-color:white;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header .menu a{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    padding: 10px;
+}
+header .menu a:hover{
+    background-color: aliceblue;
+}
+
+/* background */
+.background{
+    background: url(./images/clouds.jpg) fixed;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 300px;
+    position: relative;
+    top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.background b{
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* about me */
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 400px;
+
+    position: relative;
+    top: 80px;
+}
+.about h1{
+    font-weight: 1000;
+    font-size: 40px;
+}
+.about .about_explain{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+}
+.about .about_explain .explain{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    height: 200px;
+    width: 1000px;
+    position: relative;
+    left: 0;
+    animation: explain 1s ease-in-out;
+}
+@keyframes explain {
+    from{
+        left: -20%;
+        opacity: 0;
+    }to{
+        left: 0;
+        opacity: 1;
+    }
+}
+@keyframes unExplain{
+    from{
+        left: 0;
+        opacity: 1;
+    }to{
+        left: -20%;
+        opacity: 0;
+    }
+}
+.about section{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    width: 200px;
+}
+.about section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 25px;
+}
+.about section div p{
+    color: gray;
+}
+.about .fa-solid{
+    font-size: 30px;
+}
+.about .fa-regular{
+    font-size: 100px;
+}
+
+/* skills */
+.skills{
+    height: 600px;
+    background-color: aliceblue;
+    position: relative;
+    top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.skills h1{
+    font-weight: 1000;
+    font-size: 40px;
+}
+.skills .skills_list{
+    background: white;
+    width: 1000px;
+    height: 450px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 7px gray;
+}
+.skills .language_type{
+    display: flex;
+    justify-content: space-around;
+}
+.skills .type{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+}
+.skills .type i{
+    font-size: 30px;
+}
+.skills .type p{
+    font-weight: bold;
+}
+.skills .language{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    height: 100px;
+}
+.skills .language div{
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.skills hr{
+    color: gray;
+}
+
+/* project */
+.project{
+    z-index: 10;
+}
+.project .vedeoBack > video{/*동영상 배경*/
+    width: 100vw;
+    height: 800px;
+    opacity: 0.4;
+    /* 억지로 사이즈 맞춰주는듯? */
+    object-fit: cover;
+    overflow: hidden;
+
+    position: relative;
+    top: 80px;
+}
+.content{ /*동영상 배경 살짝 어둡게*/
+    position: absolute;
+    top: 1380px;
+    background-color: rgb(0, 0, 0, 0.442);
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.content h1{
+    color: white;
+    font-size: 40px;
+    font-weight: 1000;
+}
+.website{
+    width: 1000px;
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+}
+.website a{
+    width: 400px;
+    height: 200px;
+    text-decoration: none;
+    color: black;
+    margin: 10px auto; /*좌우 마진 auto*/
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+
+    transition: 0.2s ease-in-out;
+
+    /* 웹사이트 이미지 중앙 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.website a:hover{
+    transform: scale(1.03);
+}
+.website a img{
+    width: 300px;
+}
+
+/* archiving */
+.archiving{
+    width: 100%;
+    height: 500px;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+    top: 80px;
+}
+.archiving h1{
+    font-weight: 1000;
+    font-size: 40px;
+}
+input[name='tab-group']{
+    display: none;
+}
+.tab-button{
+    display: inline-block;
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.tab-content{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 457px;
+    height: 200px;
+    padding: 20px;
+    margin-top: 10px;
+    display: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2;
+
+    animation: tab-content 0.3s ease-in-out;
+}
+@keyframes tab-content {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.tab-content:hover{
+    background-color: aliceblue;
+}
+.tab-content img{
+    width: 200px;
+}
+.tab-content p{
+    color: #333;
+}
+input#tab1:checked + label, 
+input#tab2:checked + label, 
+input#tab3:checked + label{
+    background-color:aliceblue;
+    color: black;
+    font-weight: bold;
+}
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3{
+    display: block;
+}
+
+/* paper */
+.paper{
+    background-color: aliceblue;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+    top: 80px;
+}
+.paper h1{
+    font-weight: 1000;
+    font-size: 40px;
+}
+.paper .paper_explain{
+    text-decoration: none;
+    background-color: white;
+    width: 600px;
+    height: 350px;
+    box-shadow: 2px 2px 4px gray;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.paper .paper_name{
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.paper b{
+    font-weight: bold;
+}
+.paper ul{
+    list-style:inside;
+    line-height: 25px;
+}
+.paper img{
+    width: 200px;
+}
+.paper a{
+    text-decoration: none;
+}
+.paper a:hover{
+    text-decoration:underline;
+}
+
+/* footer */
+footer { 
+    color: gray;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 80px;
+}
+
+/* 반응형 웹 */
+@media screen and (max-width: 1024px){
+    .menu{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .skills .skills_list{
+        width: 90%;
+    }
+    .website{
+        grid-template-columns: 1fr;
+    }
+    .project .vedeoBack > video{
+        height: 1600px;
+    }
+    .content{
+        height: 1600px;
+    }
+}
