@@ -6,7 +6,6 @@ a{
     text-decoration: none;
 }
 #wrap{
-    border: 1px solid red;
     margin: 0 auto;
     width: 100%;
     max-width: 1200px; /*최대 사이즈*/
@@ -86,7 +85,6 @@ nav.is-open{
 
 /* common */
 .container{
-    border: 1px solid red;
     width: 100%;
 }
 
@@ -106,7 +104,6 @@ nav.is-open{
 }
 
 .promo-list a{
-    border: 5px solid green;
     display: block;
     text-align: center;
     background-color: #f2f2f2;
