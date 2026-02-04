@@ -108,6 +108,8 @@ main p{
 }
 .menu{
     grid-area: menu;
+    display: flex;
+    justify-content: center;
 }
 .menu_box{
     background: white;
@@ -119,7 +121,7 @@ main p{
 
     position: relative;
     top: -70px;
-    left: 440px;
+    /* left: 440px; */
     
     display: flex;
     justify-content: space-around;
@@ -128,6 +130,49 @@ main p{
     text-decoration: none;
     color: black;
 }
+
 .plus{
     grid-area: plus;
+    display: flex;
+    justify-content: center;
+}
+.announcement{
+    background-color: rgb(231, 229, 229);
+    width: 300px;
+    height: 200px;
+    border-radius: 3px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.announcement p{
+    color: gray;
+}
+.announcement .fa-plus{
+    color: black;
+}
+.announcement_text a{
+    text-decoration: none;
+    color: gray;
+}
+.call{
+    margin-left: 20px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.call a{
+    text-decoration: none;
+}
+.call .call_box1{
+    display: flex;
+}
+.call .call_box2 p:nth-of-type(odd){
+    color: black;
+    font-weight: bold;
+}
+.call .call_box2 p:nth-of-type(even){
+    color: gray;
 }
